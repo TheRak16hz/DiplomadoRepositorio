@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "category_id": 1,
+        "title": "El Futuro de la Inteligencia Artificial",
+        "content": "La inteligencia artificial avanza a pasos agigantados. Desde el procesamiento del lenguaje natural hasta la visión por computadora, la IA está transformando industrias enteras y redefiniendo nuestra interacción con la tecnología. Se espera que en los próximos años veamos una mayor integración de la IA en nuestra vida cotidiana, desde asistentes personales más inteligentes hasta sistemas de salud más eficientes. Sin embargo, también surgen desafíos éticos y de seguridad que deben ser abordados cuidadosamente.",
+        "image_url": "https://via.placeholder.com/600x400?text=Inteligencia+Artificial",
+        "created_at": "2025-07-20T10:00:00Z"
+    },
+    {
+        "id": 2,
+        "category_id": 2,
+        "title": "Aventura por los Andes Peruanos",
+        "content": "Explorar los Andes peruanos es una experiencia inolvidable. Desde las antiguas ruinas de Machu Picchu hasta los impresionantes paisajes del Cañón del Colca, Perú ofrece una mezcla única de cultura, historia y naturaleza. Prepárate para caminatas exigentes, altitudes elevadas y vistas que te dejarán sin aliento. No olvides probar la deliciosa gastronomía local y sumergirte en las tradiciones andinas.",
+        "image_url": "https://via.placeholder.com/600x400?text=Andes+Peruanos",
+        "created_at": "2025-07-18T14:30:00Z"
+    },
+    {
+        "id": 3,
+        "category_id": 3,
+        "title": "Recetas Sencillas para Cenas Rápidas",
+        "content": "Cocinar no tiene por qué ser complicado. Aquí te presentamos tres recetas fáciles y rápidas para esas noches ajetreadas. Desde una pasta al pesto en 15 minutos hasta unas quesadillas de pollo que se preparan en un abrir y cerrar de ojos, estas opciones te salvarán de pedir comida a domicilio. ¡Sorprende a tu paladar sin pasar horas en la cocina!",
+        "image_url": "https://via.placeholder.com/600x400?text=Recetas+Rapidas",
+        "created_at": "2025-07-15T09:15:00Z"
+    },
+    {
+        "id": 4,
+        "category_id": 1,
+        "title": "Guía para Empezar con el Desarrollo Web",
+        "content": "El desarrollo web es un campo emocionante y en constante evolución. Si estás pensando en empezar, este artículo te guiará a través de los fundamentos: HTML para la estructura, CSS para el estilo y JavaScript para la interactividad. Exploraremos los marcos de trabajo más populares como React, Angular y Vue.js, y te daremos consejos sobre cómo construir un portafolio sólido para destacar en el mercado laboral.",
+        "image_url": "https://via.placeholder.com/600x400?text=Desarrollo+Web",
+        "created_at": "2025-07-12T11:45:00Z"
+    }
+]

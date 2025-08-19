@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campos de entrada de texto y contraseña</title>
+</head>
+<body>
+    br*3+h2{campo de entrada de texto y contraseña}+form>div>label[for="nombre"]{Nombre:}+input[type="text" id="nombre" name="nombre" size="30" maxlength="15" placeholder="ingrese su nombre"]^div>label[for="clave"]{Contraseña:}+input[type="password" id="clave" name="clave" size="16" maxlength="10" placeholder="ingrese su contraseña" pattern="[ñÑÁáÉéÍíÓóÚú-A-Za-z0-9]{4,8}" title="no inserte simbolos"]^input[type="submit"]
+
+    <br><br><br>
+    <h2>campo de entrada de texto y contraseña</h2>
+    <form action="">
+        <div><label for="nombre">Nombre:</label><input type="text" id="nombre" name="nombre" size="30" maxlength="15" placeholder="ingrese su nombre"></div>
+        <!-- id suele ser usado para agregarle funcionalidades/interaccion a un elemento de HTML desde JS. para que cuando el usuario haga clic ahi, el elemento haga algo. Mientras que el atributo name es usado para identificar un dato de un formulario en un servidor o base de datos-->
+
+        <div><label for="clave">Contraseña:</label><input type="password" id="clave" name="clave" size="16" maxlength="10" placeholder="ingrese su contraseña" pattern="[ñÑÁáÉéÍíÓóÚú-A-Za-z0-9]{4,8}" title="no inserte simbolos"></div>
+        <input type="submit">
+    </form>
+    <!--
+        Expresiones regulares
+        . cualquier caracter, excepto nueva linea
+        \d cualquier digito (0-9)
+        \D no es un digito (0-9)
+        \w caracter de palabra (a-z, A-Z, 0-9, _)
+        \W no es un caracter de palabra
+        \s espacio de cualquier tipo. (espacio, tab, nueva linea)
+        \S no es un espacio, tab o nueva linea
+
+        Cuantificadores:
+        "* - 0 o más repeticiones"
+        "+ 1 o más repeticiones"
+        "? 0 o 1 repeticion"
+        "{n} n repeticiones"
+        "{n,} n o más repeticiones"
+        "{n,m} entre n y m repeticiones"
+    -->
+</body>
+</html>
