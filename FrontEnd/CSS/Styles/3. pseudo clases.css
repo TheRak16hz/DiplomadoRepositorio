@@ -1,0 +1,15 @@
+a:active {
+    background-color: #0C00FF;
+} /*efecto al pulsar sobre la etiqueta a*/
+
+a:link {
+    color: #FF0000;
+} /*cambia el color del enlace cuando no se ha ingresado al mismo*/
+
+a:visited {
+    color: #505050;
+} /*cambia el color del enlace cuando ya se ha ingresado al mismo*/
+
+a:hover {
+    color: #00FF06
+} /*cambia el color del enlace cuando se pasa el mouse por encima*/
