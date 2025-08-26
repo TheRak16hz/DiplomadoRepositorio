@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores hermanos (+)</title>
+</head>
+<body>
+    <!--operadores hermanos estan en el mismo nivel y el signo es + -->
+    
+    <!--div+h3+p+h4-->
+    <div></div>
+    <h3></h3>
+    <p></p>
+    <h4></h4>
+
+    <br>
+    <!--otros ejemplos-->
+    <!--div+div+div-->
+    <div></div>
+    <div></div>
+    <div></div>
+    
+    <br>
+    <!--h1+div+h3-->
+    <h1></h1>
+    <div></div>
+    <h3></h3>
+
+    <br>
+    <!--h3+bq+div+p-->
+    <h3></h3>
+    <blockquote></blockquote>
+    <div></div>
+    <p></p>
+
+    <br>
+    <!--h1+span+h2+p-->
+    <h1></h1>
+    <span></span>
+    <h2></h2>
+    <p></p>
+
+    <br>
+    <!--div+h1+div+div+h2+div+h3+div+span+footer-->
+    <div></div>
+    <h1></h1>
+    <div></div>
+    <div></div>
+    <h2></h2>
+    <div></div>
+    <h3></h3>
+    <div></div>
+    <span></span>
+    <footer></footer>
+
+    <br>
+
+
+    <!--Operadores Hijos estan un nivel dentro del padre, signo > -->
+    <!--div>h3>div>h4-->
+    <div>
+        <h3>
+            <div>
+                <h4></h4>
+            </div>
+        </h3>
+    </div>
+
+    <br>
+    <!--otros ejemplos-->
+    
+    <!--div>article>p-->
+    <div>
+        <article>
+            <p></p>
+        </article>
+    </div>
+
+    <br>
+    <!--div>article>h1>span-->
+    <div>
+        <article>
+            <h1><span></span></h1>
+        </article>
+    </div>
+
+    <br>
+
+    <!--div>lu>li+lu>li+lu>li>p-->
+
+    <div>
+        <lu>
+            <li></li>
+            <lu>
+                <li></li>
+                <lu>
+                    <li>
+                        <p></p>
+                    </li>
+                </lu>
+            </lu>
+        </lu>
+    </div>
+
+    <br>
+    <br>
+    <!-- operadores de clase signo . -->
+    <!-- div.pepito>h3>.pepita>p>h4-->
+    <div class="pepito">
+        <h3>
+            <div class="pepita">
+                <p>
+                    <h4></h4>
+                </p>
+            </div>
+        </h3>
+    </div>
+
+    <br>
+    <!--otros ejemplos-->
+    <!--div.row+div.row-->
+    <div class="row"></div>
+    <div class="row"></div>
+
+    <br>
+    <!--div.header+h1+h2+div.footer-->
+        <div class="header"></div>
+        <h1></h1>
+        <h2></h2>
+        <div class="footer"></div>
+
+    <br>
+
+    <!--div.row>h3.title-->
+    <div class="row">
+        <h3 class="title"></h3>
+    </div>
+
+
+    <!--div.container>div.col12>h2+p+h2>span-->
+    <div class="container">
+        <div class="col12">
+            <h2></h2>
+            <p></p>
+            <h2><span></span></h2>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <!--operadores de ID signo # -->
+    <!-- div#Caja1>div#B1+div#B2+p#p1 -->
+        <div id="Caja1">
+            <div id="B1"></div>
+            <div id="B2"></div>
+            <p id="p1"></p>
+        </div>
+    
+    <br><br>
+    <!--otros ejemplos-->
+
+    <!--div#Es1+div#Es2-->
+    <div id="Es1"></div>
+    <div id="Es2"></div>
+    
+    <br>
+    <!--h1#Cuadro+h2-->
+    <h1 id="Cuadro"></h1>
+    <h2></h2>
+
+    <br>
+    <!--div.row#filaId>div.titulo#mytituloId>h1#mih1Id-->
+    <div class="row" id="filaId">
+        <div class="titulo" id="mytituloId">
+            <h1 id="mih1Id"></h1>
+        </div>
+    </div>
+
+    <br><br>
+    <!--div.row#mifilaId>p.miclase#mipId+h3.TitleClass#TituloId-->
+    <div class="row" id="mifilaId">
+        <p class="miclase" id="mipId"></p>
+        <h3 class="TitleClass" id="TituloId"></h3>
+    </div>
+
+    <br><br>
+
+    <!-- operadores de texto, signo {textodeejemplo} -->
+    <!--h2{hola}>h6{texto de prueba}+p{saludos}-->
+    <h2>hola
+        <h6>texto de prueba</h6>
+        <p>saludos</p>
+    </h2>
+
+    <!--ejemplos-->
+
+    <br><br>
+    <!--h3{hello}-->
+    <h3>hello</h3>
+
+    <br>
+    <!--div>h3>p>label{Name:}-->
+    <div>
+        <h3>
+            <p><label for="">Name:</label></p>
+        </h3>
+    </div>
+
+    <br>
+    <!--div.card>h1{Titulo}+p.clasetarjeta#myId{Subtitulo}-->
+    <div class="card">
+        <h1>Titulo</h1>
+        <p class="clasetarjeta" id="myId">Subtitulo</p>
+    </div>
+
+    <br>
+    <!-- operadores de atributo signo [] -->
+    <!--div[height="200px"]-->
+    <div height="200px"></div>
+    <br><br>
+
+    <!--otros ejemplos-->
+
+    <!--h1>td[title="Prueba1"]-->
+    <h1>
+        <td title="Prueba1"></td>
+    </h1>
+
+    <!--div.card-body[[collapse]=false]-->
+    <div class="card-body" [collapse]="false"></div>
+
+
+    <br><br>
+    <!--operadores de multiplicacion signo *-->
+
+    <!--div.row>div.col-md-3*6{Texto}-->
+    <div class="row">
+        <div class="col-md-3">Texto</div>
+        <div class="col-md-3">Texto</div>
+        <div class="col-md-3">Texto</div>
+        <div class="col-md-3">Texto</div>
+        <div class="col-md-3">Texto</div>
+        <div class="col-md-3">Texto</div>
+    </div>
+
+    <br><br>
+    <!--operador de incremento por numeracion signo $-->
+    <!--div*5{Espacio$}-->
+    <div>Espacio1</div>
+    <div>Espacio2</div>
+    <div>Espacio3</div>
+    <div>Espacio4</div>
+    <div>Espacio5</div>
+
+
+    <br>
+    <!--ul>li*5{$}-->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <!--numeracion de elementos $$$-->
+    <!--div*5{Espacio$$$$}-->
+    <div>Espacio0001</div>
+    <div>Espacio0002</div>
+    <div>Espacio0003</div>
+    <div>Espacio0004</div>
+    <div>Espacio0005</div>
+
+    <br>
+    <!--ul>li*5{$$$$}-->
+    <ul>
+        <li>0001</li>
+        <li>0002</li>
+        <li>0003</li>
+        <li>0004</li>
+        <li>0005</li>
+    </ul>
+
+    <br><br>
+    <!--subir de nivel ^ -->
+    <!-- div+div>h1{Bloque1}^div>h2{Bloque2} -->
+    <div></div>
+    <div>
+        <h1>Bloque1</h1>
+    </div>
+    <div>
+        <h2>Bloque2</h2>
+    </div>
+
+    <br><br><br>
+    <!--lorem normal-->
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus repellendus ducimus corrupti, fugiat placeat veniam molestias. Possimus consequatur magni voluptatem laudantium eum vel sed quas ut eius aliquid, est error.
+
+    <!--lorem 10-->
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ducimus.
+
+    <!-- lorem de 50 -->
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro tenetur dolorem labore, iusto qui quibusdam adipisci quia incidunt maxime omnis nisi, autem repellat fugiat ea doloremque? Animi et dolor dolores at nam! Voluptatum magni laudantium sequi voluptas minus? Earum, impedit natus inventore quos iure aut vero praesentium exercitationem. Quasi, temporibus!
+
+
+
+</body>
+</html>
