@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'personal';
+    src:url(../../Resources/Mollen-Personal-Use-Regular.otf)
+}
+
+* {
+    font-family: 'personal';
+}
+
+body {
+    margin: 0;
+}
+
+.logo {
+    width: 125px;
+    padding-top: 5px;
+}
+
+header {
+    width: 70%;
+    background-color: #F3F3F3;
+    padding-left: 15%;
+    padding-right: 15%;
+    border-bottom: 3px inset #FFBB22;
+    font-weight: bold;
+}
+
+.flotador-izquierdo {
+    float:left;
+}
+
+.flotador-derecho {
+    float: right;
+}
+

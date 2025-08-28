@@ -26,5 +26,68 @@ h2 {
     margin: -10px 0px;
     border-style: outset;
     border-color: black;
+    color: black;
+}
+
+.posicion-celeste-1 {
+    position: relative;
+    top: -525px;
+    left: 160px;
+    z-index: 1;
+}
+
+.posicion-celeste-2 {
+    position: absolute;
+    top: 80px;
+    right: 180px;
+    z-index: 1;
+}
+
+.posicion-morado-1 {
+    margin-top: -1055px;
+    float: right;
+}
+
+.gris {
+    background-color: gray;
+    width: 120px;
+    height: 120px;
+    border-style: outset;
+    border-color: black;
+    color: black;
+}
+
+.posicion-gris-1 {
+    position: absolute;
+    top: 140px;
+    left: 350px;
+}
+
+.posicion-gris-2 {
+    position: absolute;
+    top: 140px;
+    right: 350px;
+    z-index: 1;
+}
+
+.negro {
+    background-color: black;
     color: white;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 180px;
+    left: 520px;
+}
+
+.flotador-izquierdo {
+    float: left;
+}
+
+.flotador-derecho {
+    float: right;
+}
+
+.romper-flotador {
+    clear: both;
 }
