@@ -1,0 +1,41 @@
+.celeste {
+    background-color: #66FAFF;
+    margin-top: 20px;
+    margin-left: 45%;
+    height: 100px;
+    width: 100px;
+    
+}
+
+.gris {
+    background-color: gray;
+    margin-top: 20px;
+    margin-left: 35%;
+    height: 100px;
+    width: 370px;
+}
+
+.morado {
+    background-color: #C000FF;
+    margin-left: 25%;
+    padding: 10px 80px;
+    height: 100px;
+    width: 500px;
+}
+
+.negro {
+    color:white;
+    background-color: black;
+    margin-top: 50px;
+    margin-left: 15%;
+    height: 100px;
+    width: 900px;
+    padding: 20px;
+}
+
+.borde {
+    border-style: solid; /* dotted, dashed, solid, double, groove, ridge, inset, outset */
+    border-width: 5px;
+    color: #C000FF;
+}
+

@@ -1,0 +1,18 @@
+p {
+    text-indent: 30%; /* desplazamiento de la primera linea de texto */
+    text-align: justify; /* alineacion horizontal del text: right, justify, left, etc */
+    text-decoration: none; /* efectos de subrayado o tachado: none, underline, underline wavy, overline, line-through */
+    letter-spacing: 0px; /* espacio entre caracteres */
+    word-spacing: 20px; /* espacio entre palabras */
+    text-transform: capitalize; /* transformacion de texto, capitalize, uppercase, lowercase */
+    line-height: 30px; /* tamaño del espacio entre lineas */
+    vertical-align: middle; /* alineacion vertical: top, middle, bottom */
+}
+
+.fuente-arial {
+    font-family: Arial, Helvetica, sans-serif; /* familia de fuente */
+    font-style: oblique; /* estilo de fuente: normal, italic, oblique */
+    font-variant: small-caps; /* convierte el texto en mayusculas, ocupando el espacio del texto en minusculas */
+    font-weight: normal; /* anchura de caracteres: normal, bold, lighter, 100, 200, 300, 400, 500, 600, 700, 800, 900 */
+    font-size: large; /* tamaño de la fuente: xx-small, x-small, small, medium, large, x-large, xx-large, smaller, longitud, porcentaje */
+}

@@ -1,0 +1,19 @@
+.fondo-a-imagen {
+    background-image: url("../../Pictures/el-caballerito.jpg");
+    height: 768px;
+    width: 70%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover ;
+    opacity: 1;
+    color: #0FF1FF;
+} /* 
+    repeat permite que se repita o no
+    size cover permite que la imagen se ajuste al tamaño del contenedor
+    center permite que la imagen se centre en el contenedor
+    height y width permiten definir el tamaño del contenedor
+    url permite definir la imagen de fondo
+    contain permite que la imagen se ajuste al tamaño del contenedor sin recortarla
+    opacity permite definir la opacidad de la imagen de fondo
+
+*/

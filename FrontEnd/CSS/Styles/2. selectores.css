@@ -1,0 +1,30 @@
+p {
+    color:#B200B9 ;
+} /*selector de etiqueta*/
+
+.fondo-morado {
+    background-color: #B200B9;
+} /*selector de clases*/
+
+#centrar-texto {
+    text-align: center;
+} /*selector de ID*/
+
+* {
+    font-style: bold;
+} /*selector universal*/
+
+p span {
+    background-color: #000000;
+    color: #FFFFFF;
+} /*selector de descendientes*/
+
+h3, small {
+    color: #07DACE;
+    background-color: #979797;
+} /* combinacion de selectores */
+
+div>span {
+    color: #000000;
+    background-color: #B200B9;
+} /* selector de hijos directos */

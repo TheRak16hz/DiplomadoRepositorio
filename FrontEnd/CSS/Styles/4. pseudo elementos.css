@@ -1,0 +1,22 @@
+p::before {
+    content: " A - Contenido despues del parrafo - ";
+    color: #FF0000;
+} /*cambios antes del sector*/
+
+p::after {
+    content: " - Contenido despues del parrafo -";
+    color: #00FF06;
+} /*cambios despues del sector*/
+
+p:first-letter {
+    color: #000000;
+} /*cambios en la primera letra del parrafo*/
+
+p:first-line {
+    color: #0C00FF;
+} /*cambios en la primera linea del parrafo*/
+
+p::selection {
+    background-color: #8D00B6;
+    color: #FFFFFF;
+} /*cambios en la seleccion del parrafo*/
