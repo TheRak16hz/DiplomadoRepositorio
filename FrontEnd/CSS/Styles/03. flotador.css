@@ -1,0 +1,29 @@
+.celeste {
+    background-color: #66FAFF;
+    width: 150px;
+    height: 150px;
+}
+
+.gris {
+    background-color: gray;
+    width: 150px;
+    height: 150px;
+}
+
+.morado {
+    background-color: #c000ff;
+    width: 150px;
+    height: 150px;
+}
+
+.flotador-izquierdo {
+    float: left;
+}
+
+.flotador-derecho {
+    float: right;
+}
+
+.romper-flotador {
+    clear: both;
+}

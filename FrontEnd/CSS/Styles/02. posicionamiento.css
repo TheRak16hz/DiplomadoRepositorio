@@ -1,0 +1,30 @@
+.celeste {
+    position: relative;
+    background-color: #66FAFF;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+}
+
+.gris {
+    background-color: gray;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+}
+
+.morado {
+    background-color: #c000ff;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+}
+
+.contenedor {
+    height: 2000px;
+}
+
+.posicionamiento {
+    position: relative; /*absolute, relative, static, fixed*/
+    top: 50px;
+}
