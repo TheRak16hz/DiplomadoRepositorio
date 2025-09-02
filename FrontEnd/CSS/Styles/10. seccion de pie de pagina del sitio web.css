@@ -1,0 +1,230 @@
+/*inicio de Estilos de menu*/
+@font-face {
+    font-family: 'personal';
+    src:url(../../Resources/Mollen-Personal-Use-Regular.otf)
+}
+
+* {
+    font-family: 'personal';
+}
+
+body {
+    margin: 0;
+}
+
+.logo {
+    width: 125px;
+    padding-top: 5px;
+}
+
+header {
+    width: 70%;
+    background-color: #F3F3F3;
+    padding-left: 15%;
+    padding-right: 15%;
+    border-bottom: 3px inset #FFBB22;
+    font-weight: bold;
+}
+
+.flotador-izquierdo {
+    float:left;
+}
+
+.flotador-derecho {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #232323;
+}
+
+nav li {
+    padding: 21px 20px;
+}
+
+nav li:hover{
+    background-color: #FFBB22;
+    color: #232323;
+}
+/* Fin de estulos del menu del sitio web */
+/* inicio de estilos de la imagen principal del sitio web */
+
+.borde-imagen {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
+/* fin de estilos del banner principal */
+/*inicio de estilos de la seccion de noticias*/
+
+.titulo-seccion {
+    width: 100%;
+    padding-top: 2%;
+    text-align: center;
+}
+
+.seccion-noticias {
+    width: 80%;
+    padding: 2% 10%;
+}
+
+.noticia-individual {
+    width: 30%;
+    height: 520px;
+    border: 1px solid #D3D3D3;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: justify;
+    padding-bottom: 1%;
+    float: left;
+}
+
+.imagen-noticia {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.titulo-noticia {
+    padding: 1% 5%;
+}
+
+.resumen-noticia {
+    padding: 1% 5%;
+}
+
+.boton-noticia {
+    background-color: #ffbb22;
+    text-decoration: none;
+    color: #232323;
+    display: block;
+    text-align: center;
+    padding: 2% 0;
+    margin: 0 5%;
+    border-radius: 10px;
+}
+
+.boton-noticia:hover {
+    background-color: #232323;
+    color: #FFBB22;
+}
+/*fin de estilos de la seccion de noticias*/
+/*inicio del modulo 13 clase 4*/
+
+.romper-float {
+    clear: both;
+}
+
+.iframe-epic { /* also mine */
+    padding-left: 380px;
+    padding-bottom: 50px;
+}
+
+/* fin de estilos modulo 13 clase 4*/
+
+/*inicio estilos modulo 13 clase 5*/
+
+.contenedor-contacto {
+    width: 100%;
+    height: 550px;
+    background: url(../../Pictures/banner-contacto.jpg);
+    background-size: cover;
+}
+
+.form {
+    width: 30%;
+    float: right;
+    margin-top: 25px;
+    margin-right: 15%;
+    color: #FFF; /*mine*/
+}
+
+.nombre-formualrio {
+    display: block;
+    color: #ffbb22;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.entrada-formulario {
+    background-color: #000000;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #FFBB22;
+    width: 94%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 18px;
+}
+
+.titulo-formulario {
+    color: #FFBB22;
+}
+
+textarea {
+    min-width: 94%;
+    max-width: 94%;
+    max-height: 40px;
+    min-height: 20px;
+    text-align: justify;
+}
+
+.boton-formulario {
+    outline: none;
+    border: none;
+    background-color: #FFBB22;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+}
+/*fin del formualrio*/
+/* inicio footer */
+
+.logo-pie {
+    width: 210px;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-pie-pagina {
+    width: 100%;
+    background-color: #CDCDCD;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.pie {
+    width: 80%;
+    padding: 5% 5%;
+}
+
+.pie a {
+    text-decoration: none;
+}
+
+.redes-sociales {
+    border: solid 1px #000;
+    width: 17px;
+    height: 17px;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.pie-pagina-copyright {
+    background-color: #FFBB22;
+    padding: 10px 10px;
+    text-align: center;
+    font-weight: bold;
+}
