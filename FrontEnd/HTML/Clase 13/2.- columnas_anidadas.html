@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS/Bootstrap/css/2.- columnas_anidadas.css">
+    <link rel="stylesheet" href="../../CSS/Bootstrap/css/bootstrap.min.css">
+    <title>Columnas anidadas</title>
+</head>
+<body>
+    <!--la clase container controla el ancho del contenido, En lugar de que el contenido se extienda de borde a borde en la ventana del navegador, el container crea un margen a los lados, asegurando que el diseño sea mas legible y esteticamente agradable, especialmente en pantallas grandes-->
+    <div class="container">
+        <!--anidamiento de columnas-->
+        <!-- la clase row se utiliza siempre dentro de un .container o un .container-fluid. Su proposito principal es agrupar una o mas columnas (.col) que, en conjunto, forman una fila completa. Esta estructura permite dividir el espacio horizontal de la pagina hasta 12 columnas virtuales -->
+        <div class="row">
+            <!--la clase col en bootstrap es la que define la columna individual dentro de un diseño de cuadricula. Es la unidad mas pequeña y fundamenta del sistema de maquetacion de bootstraop y siempre se coloca dentro de una clase .row -->
+            <div class="columna-principal col-12 col-md-6">
+                Columna Principal N°1
+                <div class="row">
+                    <!--xd (extra-small, para telefonos, pro defecto si solo usas col- sin prefijo)
+                    sm (small, por tabletas)
+                    md (medium, para computadoras de escritorio pequeñas)
+                    lg (large, para computadoras de escritorio grandes)
+                    xl (extra-large)
+                    xxl (extra-extra-large)-->
+                    <div class="columna-interna col-12 col-md-3">Columna Interna N°1</div>
+                    <div class="columna-interna col-12 col-md-3">Columna Interna N°2</div>
+                    <div class="columna-interna col-12 col-md-3">Columna Interna N°3</div>
+                </div>
+            </div>
+            <div class="columna-principal col-12 col-md-6">
+                Columna Principal N°2
+                <div class="row">
+                    <div class="columna-interna col-12 col-md-4">Columna Interna N°1</div>
+                    <div class="columna-interna col-12 col-md-4">Columna Interna N°2</div>
+                    <div class="columna-interna col-12 col-md-4">Columna Interna N°3</div>
+                </div>
+            </div>
+        </div>
+        <!--anidamiento de columnas-->
+        <!--La clase col-mod-4 significa "en pantallas medianas y superiores, esta columna ocupará..."-->
+    </div>
+    <script src="../../JS/Javascript/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

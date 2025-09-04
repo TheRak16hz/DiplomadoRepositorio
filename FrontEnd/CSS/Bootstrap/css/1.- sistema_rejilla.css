@@ -1,0 +1,6 @@
+.row > div {
+    background: #9fff8f;
+    margin: 10px;
+    padding: 40px;
+    border: inset 1px black;
+}

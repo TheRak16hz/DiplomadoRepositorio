@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS/Bootstrap/css/4.- alinear_columnas_verticalmente.css">
+    <link rel="stylesheet" href="../../CSS/Bootstrap/css/bootstrap.min.css">
+    <title>alinear columnas verticalmente</title>
+</head>
+<body>
+    <div class="container">
+        <!--alineacion vertical individual de columnas que se indica en la clase de cada columna-->
+        <div class="row">
+            <!--la clase align-self-start hace que el elemento al que se aplica se alinee con el borde superior ( o el borde inicial) de su fila, ignorando la alineacion global que pueda tener el contenedor. -->
+            <div class="col align-self-start">align-self-start</div>
+            <!--la clase align-self-center centra verticalmente el elemento dentro de su fila, independientemente de la alineacion global del contenedor.-->
+            <div class="col align-self-center">align-self-center</div>
+            <!-- La clase align-self-end alinea el elemento con el borde inferior (o el borde final) de su fila, sin considerar la alineacion global del contenedor -->
+            <div class="col align-self-end">align-self-end</div>
+        </div>
+        <!--alineacion vertical grupal de columnas que se indica en la clase de cada fila-->
+        <!--la clase align-items-start se usa para alinear a todos los elementos hijos de un contenedor en el inicio de su eje transversal- Esto generalmente significa que los elementos se alinean en la parte superior de la fila -->
+        <div class="row align-items-start">
+            <div class="col">align-items-start</div>
+            <div class="col">align-items-start</div>
+            <div class="col">align-items-start</div>
+        </div>
+        <!--la clase align-items-center se utiliza para centrar verticalmente todos los elementos hijos dentro de un contenedor. esto significa que los elementos se alinean en el centro del eje transversal de la fila -->
+        <div class="row align-items-center">
+            <div class="col">align-items-center</div>
+            <div class="col">align-items-center</div>
+            <div class="col">align-items-center</div>
+        </div>
+        <!--la clase align-items-end se usa para linear todos los elementos hijos de un contenedor al final de su eje transversal. Esto generalmente significa que los elementos se alinean en la parte inferior de la fila -->
+        <div class="row align-items-end">
+            <div class="col">align-items-end</div>
+            <div class="col">align-items-end</div>
+            <div class="col">align-items-end</div>
+        </div>
+    </div>
+    <script src="../../JS/Javascript/js/bootstrap.min.js"></script>
+</body>
+</html>
