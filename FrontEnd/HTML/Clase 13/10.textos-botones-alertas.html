@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS/Bootstrap/css/bootstrap.min.css">
+    <title>textos, botones y alertas</title>
+</head>
+<body>
+    <!--la clase d-block se usa para forzar a un elemento HTML a comportarse como un elemento de bloque, sin importar su tipo de etiqueta predeterminada-->
+    <h2 class="text-capitalize text-center text-decoration-underline d-block mb-2">
+        seccion de botones
+    </h2>
+    <!--la clase m se usa para aplicar un margen a un elemento en todos los lados, es parte del sistema de espaciado que te permite controlar rapidamente los margenes  y lso rellenos de cualquier elemento HTML
+    m-0: elimina el margen en todos los lados
+    m-1: aplica un margen pequeño
+    m-2: aplica un margen mediano
+    m-3: aplica un margen grande
+    m-4: aplica un margen extra grande
+    m-5: aplica un margen maximo
+    mt-* : margen superior
+    mb-* : margen inferior
+    me-* : margen derecho
+    ms-* : margen izquierdo
+    mx-* : margen horizontal (izquierda y derecha)
+    my-* : margen vertical (superior e inferior)
+    -->
+    <div class="row mt-3">
+        <div class="col-12 m-4">
+            <input type="button" class="btn btn-warning" value="Cuidado">
+            <input type="submit" class="btn btn-dark" value="Enviar">
+            <button class="btn btn-sm btn-primary">Boton</button>
+            <button class="btn btn-md btn-outline-danger">eliminar</button>
+            <button class="btn btn-lg disabled btn-info">boton</button>
+        </div>
+        <hr>
+        <div class="col-12 m-4">
+            <button class="btn btnsucces">boton</button>
+            <button class="btn btnsucces">boton</button>
+            <button class="btn btnsucces">boton</button>
+            <button class="btn btnsucces">boton</button>
+        </div>
+        <hr>
+        <div class="col-12 m-5">
+            <div class="btn-group-vertical">
+                <button class="btn btn-danger">Boton</button>
+                <button class="btn btn-danger">Boton</button>
+                <button class="btn btn-danger">Boton</button>
+                <button class="btn btn-danger">Boton</button>
+            </div>
+        </div>
+    </div>
+    <!--alertas-->
+    <div>
+        <h2 class="text-capitalize text-center text-decoration-underline d-block mb-2">Sección de Alertas</h2>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="alert alert-success m-3 p-3">
+                alert-primary - Este es un mensaje de alerta de éxito. <br>
+                alert-secondary - Este es un mensaje de alerta secundaria. <br>
+                alert-success - Este es un mensaje de alerta de éxito. <br>
+                alert-danger - Este es un mensaje de alerta de peligro. <br>
+                alert-warning - Este es un mensaje de alerta de advertencia. <br>
+                alert-info - Este es un mensaje de alerta de información. <br>
+                alert-light - Este es un mensaje de alerta ligera. <br>
+                alert-dark - Este es un mensaje de alerta oscura. <br>
+            </div>
+            <div class="alert alert-danger m-3 p-3 alert-dismissible fade show">
+                <h3>alerta descartable</h3>
+                <hr>
+                la clase alert-dismissible se usa para crear una alerta que puede ser cerrada por el usuario, generalmente incluye un boton de cierre (x) en la esquina superior derecha de la alerta
+                <button class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../JS/Bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
