@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS/Bootstrap/css/bootstrap.min.css">
+    <title>insignias tooltops ventanas modales</title>
+</head>
+<body>
+    <div class="container">
+        <!-- primera parte de badges -->
+        <div>
+            <h2 class="text-capitalize text-center text-decoration-underline d-block mb-2">seccion de badges</h2>
+        </div>
+        <div class="row">
+            <div class="col-12 m-4 text-center">
+                <p><b>modulo but / github </b><span class="badge bg-info p-2">finalizado</span></p>
+                <p><b>modulo Base de Datos </b><span class="badge bg-dark p-2 rounded-pill">finalizado</span></p>
+            </div>
+        </div>
+        <div>
+            <h2 class="text-capitalize text-center text-decoration-underline d-block mb-2">seccion de tooltips</h2>
+        </div>
+        <div class="row m-5 text-center">
+            <div class="col">
+                <button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip Izquierda">Boton</button>
+
+                <button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip Arriba">Boton</button>
+
+                <button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip Derecha">Boton</button>
+
+                <button type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip Abajo">Boton</button>
+            </div>
+        </div>
+        <!-- tercera parte ventana modal -->
+        <div>
+            <h2 class="text-capitalize text-center text-decoration-underline d-block mb-2">seccion de ventana modal</h2>
+        </div>
+        <div class="row nt-5">
+            <div class="col text-center">
+                <button class="btn btn-success btn-md" data-bs-toggle="modal" data-bs-target="#ventana-modal-ejemplo">Consulta aqui</button>
+                <!-- data-bs-toogle="modal" indica que se ejecutara una ventana modla al dar clic en ese boton -->
+                 <div class="modal fade" id="ventana-modal-ejemplo" tabindex="-1" data-bs-backdrop="static">
+                    <!-- tabindex permite que la ventana modal funcione moviendo el foco del teclado al modal impidiendo que el usuario tabule hacia el contenido de fondo -->
+                    <!-- los valores positivos de tabindex establecen un orden de tabulacion explicito. Un elememento tabindex="-1" se enfocará antes de uno con tabindex="2", y asi sucesivamente -->
+                    <!-- data-bs-backdrop impide que se cierre el modal dando clic fuera de el -->
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Esto es un ejemplo</h5>
+                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div>
+                                    Las ventanas modales son cuadros de dialogo emergentes que se superponen al contenido de la pagina. se utilizan para captar la atencion del usuario y obligarlo a interactuar con un contenido especifico antes de que pueda continuar.
+
+                                    tienes tres partes principales:
+                                    modal-header: contiene el titulo de la ventana modal y un boton para cerrarla
+                                    modal-body: es donde se coloca el contenido, como texto, formularios o imagenes.
+                                    modal-footer: generalmente contiene botones de accion, como "Aceptar" o "Cancelar".
+
+                                    
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-success">Acepto</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../JS/Javascript/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    </script>
+</body>
+</html>

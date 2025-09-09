@@ -1,0 +1,27 @@
+.fondo-claro {
+    background: gainsboro;
+    padding: 5px;
+    border: 1px solid gray;
+}
+
+.fondo-claro-altura {
+    background: gainsboro;
+    padding: 5px;
+    border: 1px solid gray;
+    height: 200px;
+}
+
+.fondo-claro-altura-3 {
+    background: gainsboro;
+    padding: 5px;
+    border: 1px solid gray;
+    min-height: 200px;
+}
+
+.fondo-oscuro {
+    background: gray;
+    color:black;
+    padding: 10px 20px;
+    border: 1px solid black;
+
+}
