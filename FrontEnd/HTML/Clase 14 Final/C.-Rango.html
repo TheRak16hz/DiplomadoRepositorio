@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA_Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rangos</title>
+    <link rel="stylesheet" href="../../CSS/Bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- div.container>div[class="row mt-3"]>div.col-6>label.form-label[for="rango"]{Nota Final}+input.form-range#rango[type="range"min="10"max="20"step="1"]+div[class="d-flex justify-content-between"]>p.form-text{10}+p.form-text{20}^^^^script[src=""] -->
+    <div class="container">
+        <!-- Definimos un margen superior de 3 aprox 16 pixeles -->
+        <div class="row mt-3">
+            <!-- Definimos el ancho de la columna, ocupará 6 de las 12 columnas disponibles en la pantalla -->
+            <div class="col-6">
+                <label for="rango" class="form-label">Nota Final</label>
+                <!-- min: Establece el valor mas bajo que el usuario puede seleccionar con el deslizador. Por ejemplo, si min="0", el deslizador no permitirá seleccionar valores inferiores a 0 -->
+                <!-- max: Establece el valor mas alto que el usuario puede seleccionar con el deslizador. Por ejemplo, si max="100", el deslizador no permitirá seleccionar valores superiores a 100-->
+                <input type="range" class="form-range" id="rango" min="10" max="20" step="1">
+                <!-- step: Este atributo define el tamaño del "salto" o incremento con el que valor del control deslizante cambia cuando el usuario interactúa con él. Por ejemplo, si step="10", el deslizador solo permitirá valores como el 0, 10, 20, 30, etc. Si se omite, el valor predeterminado es 1 (Si el tipo es number) o un valor mas adecuado para el tipo de dato (Si es un tipo como date o time) -->
+                <div class="d-flex justify-content-between">
+                    <!-- Separa los valores 10 y 20 enviandolos a los extremos -->
+                    <p class="form-text">10</p>
+                    <p class="form-text">20</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../JS/Javascript/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
