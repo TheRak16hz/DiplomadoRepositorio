@@ -11,7 +11,7 @@
 <body>
 	<div class="row m-0 pb-5 pt-5 justify-content-center">
 		<div class="col-8 text-center">
-			<form action="#" method="POST" class="text-center">
+			<form action="#" method="" class="text-center">
 				<div class="sombra bg-azul radio-titulo pt-4 pb-4 text-center">
 					<img src="imagen/logo.png" alt="" width="20%" align="center" class="pt-2 pb-2 ">
 				</div>
@@ -50,6 +50,7 @@
 									</div>
 									<div class="col-md-6">
 										<textarea name="dir_cli" id="dir_cli" class="form-control casilla" rows="3" maxlength="100" placeholder="Dirección del Cliente"></textarea>
+										<span></span>
 									</div>
 								</div>
 								<hr class="pt-0 mt-2 mb-2 mt-0">
@@ -59,6 +60,7 @@
 									</div>
 									<div class="col-md-4">
 										<input type="text" class="form-control casilla" name="tel_cli" id="tel_cli" placeholder="Número Telefónico Principal" maxlength="12"  title="Solo Números">
+										<span></span>
 									</div>
 								</div>
 								<hr class="pt-0 mt-2 mb-2 mt-0">
@@ -82,11 +84,12 @@
 											<option value="A">Activo</option>
 											<option value="I">Inactivo</option>
 										</select>
+										<span></span>
 									</div>
 								</div>
 								<div class="row mt-5">
 									<div class="col-12  text-center">
-										<button class="btn btn-md btn-negrita cursor bg-azul" onclick="valida()">Agregar Cliente</button>
+										<button type="submit" class="btn btn-md btn-negrita cursor bg-azul">Agregar Cliente</button>
 										<input type="hidden" name="accion" id="accion" value="agregar">
 									</div>
 								</div>
