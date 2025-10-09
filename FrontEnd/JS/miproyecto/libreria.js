@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función que se ejecuta al enviar el formulario
     formulario.addEventListener("submit", function(evento) {
         evento.preventDefault();
-        
+
         // Mostrar los valores en consola
         console.log("-----------------------------------------");
         console.log("   DATOS DEL CLIENTE ENVIADOS   ");
@@ -180,5 +180,3 @@ document.addEventListener('DOMContentLoaded', () => {
         formulario.reset();
     });
 });
-
-        
