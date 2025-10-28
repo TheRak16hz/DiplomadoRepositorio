@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de continentes</title>
+    <link rel="stylesheet" href="style.css"> <!--vinculacion del css-->
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+</head>
+<body>
+    <h1>Gestion de continentes</h1>
+
+    <!--formulario para agregar/modificar-->
+    <h2>formulario</h2>
+    <form id="form-continente">
+        <input type="hidden" id="id"/> <!--para almacenar el ID al editar-->
+        <label for="nom_con">Nombre:</label>
+        <input type="text" id="nom_con" required/> <br><br>
+        <label for="des_con">Descripcion:</label>
+        <input type="text" id="des_con" required/> <br><br>
+        <label for="est_con">Estado:</label>
+        <input type="text" id="est_con" required/> <br><br>
+        <button type="submit">Guardar</button>
+    </form>
+
+    <!--tabla de continentes-->
+    <h2>lista de continentes</h2>
+    <button onclick="agregarNuevo()">Agregar Nuevo</button>
+    <table id="tabla-continentes">
+        <thead>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </thead>
+        <tbody>
+            <!--aqui se cargan los datos-->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

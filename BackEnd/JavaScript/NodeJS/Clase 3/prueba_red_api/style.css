@@ -1,0 +1,36 @@
+/* estilos basicos para la tabla y el formulario */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+h1,h2 {
+    color: #333;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+table,th,td {
+    border: 1px solid black;
+}
+
+th, td {
+    text-align: left;
+}
+
+button {
+    margin: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+}
+
+button:hover {
+    background-color: #caf1cc;
+    color: black;
+}
