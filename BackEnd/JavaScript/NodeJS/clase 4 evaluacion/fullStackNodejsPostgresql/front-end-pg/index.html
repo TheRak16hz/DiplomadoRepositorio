@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de datos de Películas</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Formulario para agregar una nueva película -->
+    <div class="form-container"id="addFormContainer" style="display: block;">
+        <h2>Agregar película</h2>
+        <form id="addMovieForm">
+            <label for="title">Título:</label>
+            <input type="text" id="title" required>
+            <label for="director">Director:</label>
+            <input type="text" id="director" required>
+            <label for="releaseYear">Año de lanzamiento:</label>
+            <input type="number" id="releaseYear" required>
+            <button type="submit" class="button1">Agregar película</button>
+        </form>
+    </div>
+
+    <!-- Formulario para editar una película. -->
+    <div class="form-container" id="editFormContainer" style="display: none;">
+        <h2>Editar película</h2>
+        <form id="editMovieForm">
+            <input type="hidden" id="editMovieId">
+            <label for="editTitle">Título:</label>
+            <input type="text" id="editTitle" required>
+            <label for="editDirector">Director:</label>
+            <input type="text" id="editDirector" required>
+            <label for="editReleaseYear">Año de lanzamiento:</label>
+            <input type="number" id="editReleaseYear" required>
+            <button type="submit" class="button2">Editar película</button>
+        </form>
+    </div>
+
+    <h1>Base de datos de Películas</h1>
+
+    <!-- Tabla para mostrar películas. -->
+    <table id="moviesTable">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Director</th>
+                <th>Año de lanzamiento</th>
+                <th>Procesos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Las filas de películas se insertarán aquí dinámicamente -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+const express = require('express');
+const cors = require('cors'); // Importa el paquete cors
+const app = express();
+
+const continenteRoutes = require('./routes/continenteRoutes.js');
+const client = require('./db/db.js'); //agregado desde DB
+
+// Middleware
+app.use(express.json()); // Para parsear JSON en las solicitudes
+app.use(cors()); // Habilita CORS para todas las rutas
+
+// Rutas
+app.use('/api', continenteRoutes);
+
+// Inicia el servidor
+const PORT = process.env.PORT || 3000;
+client.connect(); //agregado de manera epica
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});

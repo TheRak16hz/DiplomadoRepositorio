@@ -1,0 +1,332 @@
+/*estilo*/
+.casilla{	
+border:1px solid #c2c2c2 !important;
+background: rgba(255,255,255, 0.2) !important;
+color: #959595 !important;
+}
+
+.casilla:focus{	
+border: 1px solid #557dff !important;
+background: rgba(255,255,255, 0.2) !important;
+color: #000 !important;
+}
+
+.casilla:hover{	
+border: 1px solid #4f5972 !important;
+background: rgba(255,255,255, 0.2) !important;
+color: #4f5972 !important;
+}
+
+.sombra{
+box-shadow: 0px 5px 10px #001A6F;
+border-radius: 0px 0px 20px 20px;
+}
+
+.indigo{
+background-color: #e0e2ee;
+}
+
+.bg-azul{
+background-color: #001A6F;
+color: #ffffff;
+border-radius: 6px;
+padding-top: 7px;
+padding-bottom: 7px;
+}
+
+.radio-titulo{
+border-radius: 20px 20px 0px 0px;
+}
+
+.divisor-blanco{
+color: white;
+}
+
+.cursor{ 
+cursor: pointer;
+}
+
+.btn-negrita{
+font-weight:bold;
+}
+
+.btn:hover{
+  animation: shadow-pulse 1000ms 1 !important;
+  background-color: #FF8A00 !important;
+  color: white !important;
+}
+
+.icono-php{ 
+  font-size: 200px !important;
+}
+
+.ancho-completo{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.menu{
+  padding: 20px !important;
+}
+
+
+.bg-menu{
+background-color: #001A6F;
+color: #ffffff;
+padding-top: 7px;
+padding-bottom: 7px;
+border-bottom: solid 5px #fc5c04;
+}
+
+.menu-principal{
+  color: #FFFFFF !important;
+  font-weight: bold;
+  font-size: 15px;
+  
+}
+
+.invalida{
+  border: solid 1px #ff0000;
+  box-shadow: 0 0 10px red;
+}
+
+.error{
+  color: red;
+  display: block;
+}
+
+/*ubicacion*/
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #e5ecf3;
+}
+
+.panel {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: grey;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.encabezado {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+.encabezado .logo {
+  width: 170px;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+
+.encabezado h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+h1 {
+  background-color: #000f42;
+  color: white;
+  border: none;
+  margin-bottom: 3px;
+  margin-top: 3px;
+  padding: 17px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.botonera {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.botonera button {
+  background-color: #000f42;
+  color: white;
+  border: none;
+  width: 140px;
+  padding: 17px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botonera button:hover {
+  background-color: #ff7300;
+}
+
+
+.tabla-contenedor {
+  overflow-x: auto;
+}
+
+.tabla-registros {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.tabla-registros th,
+.tabla-registros td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.tabla-registros th {
+  background-color: #000f42;
+  color: white;
+}
+
+.tabla-registros td {
+  background-color: #f9f9f9;
+}
+
+
+
+/*styles.css*/
+
+
+body {
+    margin: 0;
+}
+
+.logo {
+    width: 125px;
+    padding-top: 5px;
+}
+
+header {
+    width: 70%;
+    background-color: #F3F3F3;
+    padding-left: 15%;
+    padding-right: 15%;
+    border-bottom: 3px inset #2282ff;
+}
+
+.flotador-izquierdo {
+    float:left;
+}
+
+.flotador-derecho {
+    float: right;
+}
+
+nav {
+    padding-top: 15px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #232323;
+}
+
+nav li {
+    padding: 21px 20px;
+}
+
+nav li:hover{
+    background-color: #2282ff;
+    color :black;
+}
+
+.borde-imagen {
+    width: 600px;
+}
+
+.contenedor-imagen {
+    padding-top: 400px;
+    padding-bottom: 375px;
+    color: white;
+    text-align: center;
+    background-color: #162642;
+}
+
+table,th,td {
+    border: 1px solid black;
+}
+
+th, td {
+    text-align: left;
+}
+
+button {
+    margin: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+}
+
+button:hover {
+    background-color: #caf1cc;
+    color: black;
+}
+
+
+/* --- Estilos para la Tabla de Continentes --- */
+#tabla-continentes {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    /* Aplica la sombra y el borde redondeado de la parte inferior del formulario */
+    box-shadow: 0px 5px 10px #001A6F;
+    border-radius: 0px 0px 20px 20px;
+    overflow: hidden; /* Importante para que los bordes redondeados se muestren correctamente */
+}
+
+#tabla-continentes th,
+#tabla-continentes td {
+    border: 1px solid #c2c2c2; /* Borde similar al de las casillas */
+    padding: 10px;
+    text-align: center;
+}
+
+#tabla-continentes thead {
+    /* Fondo similar al de los botones o el encabezado superior */
+    background-color: #001A6F; /* bg-azul */
+    color: white;
+}
+
+#tabla-continentes th {
+    border: 1px solid #001A6F; /* Borde más oscuro para el encabezado */
+    font-weight: bold;
+}
+
+#tabla-continentes tbody tr {
+    /* Fondo similar al del cuerpo del formulario */
+    background-color: #e0e2ee; /* indigo */
+    color: #232323; /* Asegura un color de texto legible */
+}
+
+/* Estilo para filas impares (opcional, para alternar colores como en algunas tablas) */
+#tabla-continentes tbody tr:nth-child(odd) {
+    background-color: #d1d3df; /* Un tono ligeramente diferente del indigo */
+}
+
+/* Estilo al pasar el ratón por las filas del cuerpo, similar a casilla:hover */
+#tabla-continentes tbody tr:hover {
+    background-color: #c5c7d1; /* Un tono un poco más claro o diferente para el hover */
+    color: #4f5972; /* Color de texto similar a casilla:hover */
+    cursor: default;
+}

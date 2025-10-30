@@ -1,0 +1,100 @@
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #e5ecf3;
+}
+
+.panel {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: grey;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.encabezado {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+.encabezado .logo {
+  width: 170px;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+
+.encabezado h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+h1 {
+  background-color: #000f42;
+  color: white;
+  border: none;
+  margin-bottom: 3px;
+  margin-top: 3px;
+  padding: 17px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.botonera {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.botonera button {
+  background-color: #000f42;
+  color: white;
+  border: none;
+  width: 140px;
+  padding: 17px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botonera button:hover {
+  background-color: #ff7300;
+}
+
+
+.tabla-contenedor {
+  overflow-x: auto;
+}
+
+.tabla-registros {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.tabla-registros th,
+.tabla-registros td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.tabla-registros th {
+  background-color: #000f42;
+  color: white;
+}
+
+.tabla-registros td {
+  background-color: #f9f9f9;
+}
+
+
