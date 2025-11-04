@@ -1,6 +1,6 @@
 
 function validaCampoVacio(campo) {
-    const valorCampo = campo.value.trim(); 
+    const valorCampo = campo.value.trim();
     if (valorCampo.length === 0) {
         campo.classList.add("invalida");
         campo.nextElementSibling.classList.add("error");

@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const { Client } = require('pg');
 
+
+
 //creamos la app, y asignamos puerto
 const app = express();
 const port = 3000;
@@ -13,7 +15,7 @@ const client = new Client({
     host: 'localhost',
     database: 'social_red',
     user: 'postgres',
-    password: '12345',
+    password: '1234',
     port: 5432,
 });
 
