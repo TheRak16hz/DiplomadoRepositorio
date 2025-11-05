@@ -82,7 +82,7 @@ document.getElementById('form-zona-horaria').addEventListener('submit', function
         .then(response => response.json())
         .then(() => {
             alert('Zona horaria Actualizada');
-            cargarContinentes(); //recargar la tabla
+            cargarZonasHorarias(); //recargar la tabla
         })
         .catch(error => console.error('Error al actualizar la zona horaria', error))
     } else {

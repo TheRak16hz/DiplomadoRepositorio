@@ -43,7 +43,7 @@ exports.updateZonaHoraria = async (req, res) => {
     const { id } = req.params;
     const { nom_zon, acr_zon, dif_zon, est_zon } = req.body;
     try {
-        const result = await client.query('UPDATE ubicacion.continente SET nom_zon = $1, acr_zon = $2, dif_zon = $3, est_zon = $4 WHERE cod_zon = $5 RETURNING *', [nom_zon, acr_zon, dif_zon, est_zon, id]);
+        const result = await client.query('UPDATE ubicacion.zona_horaria SET nom_zon = $1, acr_zon = $2, dif_zon = $3, est_zon = $4 WHERE cod_zon = $5 RETURNING *', [nom_zon, acr_zon, dif_zon, est_zon, id]);
         if (result.rowCount === 0) {
             return res.status(404).send('zona horaria no encontrada para actualizar');
         }

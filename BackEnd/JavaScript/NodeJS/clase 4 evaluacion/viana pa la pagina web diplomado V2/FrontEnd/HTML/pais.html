@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/ubicacion.css">
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
-    <link rel="stylesheet" href="../CSS/estilo.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
     <title>Datos de País</title>
 </head>
 <body>
     <div class="row m-0 pb-5 pt-5 justify-content-center">
         <div class="col-8 text-center">
-            <form action="#" method="POST" class="text-center">
+            <form action="#" method="POST" class="text-center" id="form-pais">
                 <div class="sombra bg-azul radio-titulo pt-4 pb-4 text-center">
                     <img src="../IMG/banner-1.png" alt="" width="20%" align="center" class="pt-2 pb-2 ">
                 </div>
@@ -24,16 +23,19 @@
                                         <h2 class="miTitulo">Datos de País</h2>
                                     </div>
                                 </div>
+                                <div>
+                                    <input type="hidden" id="id"/> <!--para almacenar el ID al editar-->
+                                </div>
                                 <div class="row mt-4 ml-3">
-                                    <div class="col-md-4 col-12 align-self-center text-left pt-2">
+                                    <!-- <div class="col-md-4 col-12 align-self-center text-left pt-2">
                                         <label for="cod_pai"><b>Código:</b></label>
-                                    </div>
+                                    </div> -->
                                     <div class="col-md-4 col-12">
-                                        <input type="text" name="cod_pai" id="cod_pai" maxlength="5" class="form-control casilla" placeholder="Código del País" title="Inserte el código para identificar el país">
-                                        <span></span>
+                                        <input type="hidden" name="cod_pai" id="cod_pai" maxlength="5" class="form-control casilla" placeholder="Código del País" title="Inserte el código para identificar el país">
+                                        <!-- <span></span> -->
                                     </div>
                                 </div>
-                                <hr class="pt-0 mt-2 mb-2 mt-0">
+                                <!-- <hr class="pt-0 mt-2 mb-2 mt-0"> -->
                                 <div class="row mt-1 ml-3">
                                     <div class="col-md-4 col-12 align-self-center text-left pt-2">
                                         <label for="nom_pai"><b>Nombre:</b></label>
@@ -66,10 +68,10 @@
                                 <hr class="pt-0 mt-2 mb-2 mt-0">
                                 <div class="row mt-1 ml-3">
                                     <div class="col-md-4 col-12 align-self-center text-left pt-2">
-                                        <label for="cod_tel_pai"><b>Código Telefónico:</b></label>
+                                        <label for="cti_pai"><b>Código Telefónico:</b></label>
                                     </div>
                                     <div class="col-md-4 col-12">
-                                        <input type="text" name="cod_tel_pai" id="cod_tel_pai" maxlength="5" class="form-control casilla" placeholder="Ej: +58, +1, +34" title="Código telefónico internacional">
+                                        <input type="text" name="cti_pai" id="cti_pai" maxlength="5" class="form-control casilla" placeholder="Ej: +58, +1, +34" title="Código telefónico internacional">
                                         <span></span>
                                     </div>
                                 </div>
@@ -87,11 +89,25 @@
                                         <span></span>
                                     </div>
                                 </div>
+                                <hr class="pt-0 mt-2 mb-2 mt-0">
+
+                                    <div class="row mt-1 ml-3">
+                                        <div class="col-md-4 col-12 align-self-center text-left pt-2">
+                                            <label for="fky_con"><b>Continente:</b></label>
+                                        </div>
+                                        <div class="col-md-4 col-12" id="fky_con_div">
+                                            <select name="fky_con" id="fky_con" class="form-control casilla">
+                                                <option value="">Slt...</option>
+                                            </select>
+                                            <span></span>
+                                        </div>
+                                    </div>
+
                                 <div class="row mt-5">
                                     <div class="col-12 text-center">
                                         <button class="btn btn-md btn-negrita cursor bg-azul" type="submit">Agregar País</button>
-                                        <button class="btn btn-md btn-negrita cursor bg-azul" type="button" onclick="window.location.href='../Ubicacion/ubicacion-main.html'">Menú Principal</button>
-                                        <input type="hidden" name="accion" id="accion" value="agregar">
+                                        <button class="btn btn-md btn-negrita cursor bg-azul" type="button" onclick="window.location.href='./ubicacion-main.html'">Menú Principal</button>
+                                        <!-- <input type="hidden" name="accion" id="accion" value="agregar"> -->
                                     </div>
                                 </div>
                             </div>
@@ -99,8 +115,32 @@
                     </div>
                 </div>
             </form>
+
+            <br><br>
+            <div>
+                <!--tabla de continentes-->
+                <button class="btn-primary rounded" onclick="agregarNuevo()">Limpiar Formulario</button>
+                <br><br>
+                <h2>lista de paises</h2>
+                <table id="tabla-paises" class="table-form">
+                    <thead>
+                        <th>Nombre</th>
+                        <th>Descripcion</th>
+                        <th>Alias</th>
+                        <th>Codigo telefonico</th>
+                        <th>Continente (fk)</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </thead>
+                    <tbody>
+                        <!--aqui se cargan los datos-->
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </div>
-    <script src="../JS/Pais.js"></script>
+    <script src="../JS/PaisRegex.js"></script>
+    <script src="../JS/PaisScript.js"></script>
 </body>
 </html>
