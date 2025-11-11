@@ -1,23 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css"> 
+    <link rel="stylesheet" href="../CSS/estilo.css">
     <link rel="stylesheet" href="../CSS/ubicacion.css">
-    <title>Continente</title>
+    <title>Continente</title>
 </head>
 <body>
-    <div class="modulo-ubicacion">
-        <div class="panel">
-            <div class="encabezado">
-                <img src="../IMG/logo.jpg" alt="Logo Proyecto" class="logo">
-                <h1>Continente</h1>
+    <div class="modulo-ubicacion">
+        <div class="panel">
+            <div class="encabezado">
+                <img src="../IMG/logo.jpg" alt="Logo Proyecto" class="logo">
+                <h1>Continente</h1>
+            </div>
+            <div class="botonera">
+                                <a href="./Datos_continente.html"><button>Agregar Nuevo</button></a> 
+                <button onclick="history.back()">Volver</button>
+            </div>
+            
+            <hr>
+            
+            <div class="listado-continentes p-3">
+                <h2 style="text-align: center;">Listado de Continentes</h2>
+                
+                <div class="table-responsive">
+                    <table id="tabla-continentes" class="table table-bordered">
+                        <thead> 
+                            <tr>
+                                <th>Código</th> 
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Estatus</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody style="background-color: white;">
+                            <tr><td colspan="5" style="text-align: center;">Cargando datos...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <div class="botonera">
-                <a href="./Datos_continente.html"><button>Listar</button></a>
-                <button onclick="history.back()">Volver</button>
-            </div>
-        </div>
-    </div>  
+            <form id="form-continente" style="display: none;"> 
+                <input type="hidden" id="id" name="cod_con_oculto">
+                <input type="text" id="nom_con"><input type="text" id="des_con">
+                <select id="est_con"><option value="A">Activo</option><option value="I">Inactivo</option></select>
+                <button type="submit">Guardar</button>
+            </form>
+            
+        </div>
+    </div>  
+    <script src="../JS/ContinenteListado.js"></script>
 </body>
 </html>

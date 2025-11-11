@@ -285,7 +285,7 @@ button:hover {
 
 
 /* --- Estilos para la Tabla de Continentes --- */
-#tabla-continentes {
+.table-form{
     width: 100%;
     border-collapse: collapse;
     font-size: 15px;
@@ -295,37 +295,37 @@ button:hover {
     overflow: hidden; /* Importante para que los bordes redondeados se muestren correctamente */
 }
 
-#tabla-continentes th,
-#tabla-continentes td {
+.table-form th,
+.table-form td {
     border: 1px solid #c2c2c2; /* Borde similar al de las casillas */
     padding: 10px;
     text-align: center;
 }
 
-#tabla-continentes thead {
+.table-form thead {
     /* Fondo similar al de los botones o el encabezado superior */
     background-color: #001A6F; /* bg-azul */
     color: white;
 }
 
-#tabla-continentes th {
+.table-form th {
     border: 1px solid #001A6F; /* Borde más oscuro para el encabezado */
     font-weight: bold;
 }
 
-#tabla-continentes tbody tr {
+.table-form tbody tr {
     /* Fondo similar al del cuerpo del formulario */
     background-color: #e0e2ee; /* indigo */
     color: #232323; /* Asegura un color de texto legible */
 }
 
 /* Estilo para filas impares (opcional, para alternar colores como en algunas tablas) */
-#tabla-continentes tbody tr:nth-child(odd) {
+.table-form tbody tr:nth-child(odd) {
     background-color: #d1d3df; /* Un tono ligeramente diferente del indigo */
 }
 
 /* Estilo al pasar el ratón por las filas del cuerpo, similar a casilla:hover */
-#tabla-continentes tbody tr:hover {
+.table-form tbody tr:hover {
     background-color: #c5c7d1; /* Un tono un poco más claro o diferente para el hover */
     color: #4f5972; /* Color de texto similar a casilla:hover */
     cursor: default;
