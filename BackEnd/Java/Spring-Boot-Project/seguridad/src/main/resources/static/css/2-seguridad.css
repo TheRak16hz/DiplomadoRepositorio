@@ -1,0 +1,110 @@
+body {
+  background-color: #f3f4f6; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+  font-family: sans-serif;
+  margin: 0;
+
+}
+
+.contenedor-tarjeta {
+  max-width: 900px;
+  height: 370px;
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);  
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: white;
+
+}
+
+.cabecera-logo {
+  background-image: linear-gradient(to right, #0043a7 0%, #0d67a3 100%);
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.cabecera-logo img {
+  width: 250px;
+  height: 80px;
+  margin-right: 1rem; 
+  margin-bottom: 0.5rem;
+}
+
+.cabecera-logo h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.contenido-principal {
+  padding: 20px;
+  background-color: #f9fafb;
+}
+
+.titulo-personal {
+  font-size: 30px;
+  text-align: center;
+  background: linear-gradient(to right, #0043a7 0%, #0d67a3 100%);
+  color: rgb(230, 233, 241);
+  min-width: 600px;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 3rem;
+}
+
+.rejilla-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.boton-accion {
+  padding: 0.4rem 1.2rem;
+  border-radius: 9999px;
+  color: rgb(230, 233, 241);
+  font-weight: 600;
+  font-size: 0.95rem;
+  background-image: linear-gradient(to right, #0043a7 0%, #0d67a3 100%);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.boton-accion:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2),
+    0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+.boton-volver {
+  padding: 0.4rem 1.2rem;
+  border-radius: 9999px;
+  color: #222;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: linear-gradient(to right, #bfc4ca 0%, #e5e7eb 100%);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+.boton-volver:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2),
+    0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
