@@ -1,0 +1,185 @@
+body{
+    font-family: sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+    margin: 0;
+}
+
+.tarjeta-contenedor{
+    max-width: 36rem;
+    width: 100%;
+    border-radius: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    background-color: white;
+}
+
+.cabecera-logo{
+    background-image: linear-gradient(to right, #0043a7 0%, #0d67a3 100%);
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+        
+.cabecera-logo img{
+    width: 250px;
+    height: 80px;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+        
+.cabecera-logo h1{
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.contenido-principal{
+    padding: 1.5rem;
+    background-color: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-seccion{
+    font-size: 15px;
+    text-align: center;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    background-image: linear-gradient(to right, #0043a7 0%, #0d67a3 100%);
+    color: #e6e9f1;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+    max-width: 12rem;
+    width: 100%;
+}
+
+.formulario{
+    width: 100%;
+}
+
+.rejilla-formulario{
+    display: flex; 
+    flex-direction: column; 
+    gap: 1rem;
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.etiqueta{
+    display: block;
+    color: #4b5563;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.entrada{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    outline: none;
+    box-sizing:border-box;
+
+}
+
+.entrada:focus{
+    border-color: #0043a7;
+    box-shadow: 0 0 0 2px rgba(0, 67, 167, 0.5);
+}
+
+.contenedor-botones{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+
+.boton-accion{
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    color: #e6e9f1;
+    font-weight: 600;
+    font-size: 0.875rem;
+    background-image: linear-gradient(to right, #0043a7 0%, #0d67a3 100%);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-accion:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+
+.boton-secundario{
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    color: #e6e9f1;
+    font-weight: 600;
+    font-size: 0.875rem;
+    background-image: linear-gradient(to right, #0043a7 0%, #0d67a3 100%);
+    box-shadow: 0 10px 15px -3px;
+    border: none;
+    cursor: pointer;
+
+}
+.boton-secundario:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1); 
+}
+
+.boton-secundario {
+    padding: 0.4rem 1.2rem;
+    border-radius: 9999px;
+    color: #222;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background: linear-gradient(to right, #bfc4ca 0%, #e5e7eb 100%);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+
+}
+.boton-secundario:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1); 
+}
+
+.error {
+    color: #cc6600;
+    background-color: #fff8e1;
+    border: 1px solid #ffcc66;
+    
+    padding: 6px 10px; 
+    margin-top: 5px; 
+    font-size: 0.9em; 
+    font-weight: bold; 
+    border-radius: 4px; 
+    display: block !important; 
+    animation: fadeIn 0.3s ease-out;
+}
+
+
+.invalida {
+    border: 2px solid #ffcc66 !important; 
+    box-shadow: 0 0 5px rgba(255, 204, 102, 0.7); 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}

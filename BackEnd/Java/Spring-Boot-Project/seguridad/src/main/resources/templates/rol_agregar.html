@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/css/4.1-rol_agregar.css}">
+
+    <title>Agregar Rol</title>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="tarjeta-contenedor">
+      <div class="cabecera-logo">
+      <img th:src="@{/img/logo.png}" alt="Logo de la red social" class="img-fluid w-25">
+        <h1 class="text-lg font-bold">Registro Rol</h1>
+      </div>
+
+      <div class="contenido-principal">
+        <h2 class="titulo-seccion">Agregar Nuevo Rol</h2>
+
+        <form class="formulario" id="addForm" th:action="@{/rol_agregar}" th:object="${rol}" method="post"
+        >
+          <div class="rejilla-formulario">
+            <div class="campo">
+              <label for="nom_rol" class="etiqueta"
+                >Nombre Del Rol</label>
+              <input
+                type="text"
+                id="nom_rol"
+                name="nom_rol"
+				th:field="*{nom_rol}"
+                class="entrada"
+              />
+              <span class="error-message"></span>
+            </div>
+            <div class="campo">
+              <label for="des_rol" class="etiqueta"
+                >Descripcion del Rol</label>
+              <input
+                type="text"
+                id="des_rol"
+                name="des_rol"
+				th:field="*{des_rol}"
+                class="entrada"
+              />
+              <span class="error-message"></span>
+            </div>
+            <div class="campo">
+              <label for="est_rol" class="etiqueta">Estatus</label>
+              <select id="est_rol" name="est_rol" th:field="*{est_rol}" class="entrada">
+                <option value="">Seleccione...</option>
+                <option value="A">Activo</option>
+                <option value="I">Inactivo</option>
+              </select>
+              <span class="error-message"></span>
+            </div>
+          </div>
+          <div class="contenedor-botones">
+            <button type="submit" class="boton-accion">Guardar Registro</button>
+            <a
+              href="4-rol.html"
+              class="boton-secundario"
+              style="
+                display: inline-block;
+                text-align: center;
+                text-decoration: none;
+                padding: 0.5rem 1rem;
+              "
+              >Volver</a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="../JAVASCRIPT/validaciones.js"></script>
+    <script src="../JAVASCRIPT/roles.js"></script>
+  </body>
+</html>

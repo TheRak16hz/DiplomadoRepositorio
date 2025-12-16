@@ -1,38 +1,66 @@
 package com.seguridad.seguridad.service;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.seguridad.seguridad.models.Rol;
-import com.seguridad.seguridad.models.Rol_Fan_Page;
 import com.seguridad.seguridad.repository.RolRepositorio;
 
 @Service
 public class RolServicio {
+    
+    // Inyecta el repositorio
     @Autowired
     private RolRepositorio rolRepositorio;
-    /*
-        * obtiene y devuelve una lista de todos los roles de la base de datos
-        * @return una lista de objetos Rol
-    */
-
 
     public List<Rol> listarRoles() {
-        return rolRepositorio.findAll();
+        List<Object> resultados = rolRepositorio.rol_listar();
+        
+        return resultados.stream()
+            .map(item -> {
+                if (item instanceof Object[] objetos) {
+                    Rol rol = new Rol();
+                    
+                    // --- Mapeo CORREGIDO (Verifica este orden con tu función SQL) ---
+                    // El orden de los índices DEBE COINCIDIR con el orden de las columnas que devuelve tu función 'seguridad.rol_listar()'
+
+                    // Se asume el orden más común para la tabla Rol: (cod_rol, nom_rol, des_rol, est_rol)
+
+                    if (objetos.length > 0) {
+                        // 1. Índice 0: Asignado al CÓDIGO (PK)
+                        // NOTA: Es común que el ID sea Integer en Java, por eso se hace un casting explícito o conversíon segura.
+                        rol.setCod_rol(Integer.valueOf(String.valueOf(objetos[0]))); 
+                    }
+                    if (objetos.length > 1) {
+                        // 2. Índice 1: Asignado al NOMBRE
+                        rol.setNom_rol(String.valueOf(objetos[1])); 
+                    }
+                    if (objetos.length > 2) {
+                        // 3. Índice 2: Asignado a la DESCRIPCIÓN
+                        rol.setDes_rol(String.valueOf(objetos[2])); 
+                    }
+                    if (objetos.length > 3) {
+                        // 4. Índice 3: Asignado al ESTATUS
+                        rol.setEst_rol(String.valueOf(objetos[3])); 
+                    }
+                    // -----------------------------------------------------------------
+                    
+                    return rol;
+                }
+                return null;
+            })
+            .filter(rol -> rol != null)
+            .collect(Collectors.toList());
     }
 
-    public List<Rol_Fan_Page> listar() {
-        // si el metodo personalizado retorna List<Object>, realiza el cast/conversion
-        List<Object> resultado = rolRepositorio.rol_fan_page_listar();
-        List<Rol_Fan_Page> lista = new ArrayList<>();
-        for (Object obj: resultado) {
-            if (obj instanceof Rol_Fan_Page rolFanPage) {
-                lista.add(rolFanPage);
-            }
-            // si el objeto es un array o map. deberas mapearlo manualmente a Rol_Fan_Page
-        }
-        return lista;
+    public void agregarRol(Rol rol) {
+        rolRepositorio.rol_agregar(
+            rol.getNom_rol(),
+            rol.getDes_rol(),
+            rol.getEst_rol()
+        );
     }
-
 }
