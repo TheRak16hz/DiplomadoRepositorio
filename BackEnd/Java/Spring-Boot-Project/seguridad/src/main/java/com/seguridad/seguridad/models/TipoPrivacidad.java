@@ -5,39 +5,32 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Entity
+@Entity 
 @Table(name = "tipo_privacidad", schema = "seguridad")
-public class Tipo_Privacidad {
+public class TipoPrivacidad {
+
     @Id
     @Column(name = "cod_tip")
     private int cod_tip;
 
-    @Column(name = "nom_tip")
+    @Column(name = "nom_tip") // Nombre del tipo de privacidad
     private String nom_tip;
 
-    @Column(name = "est_tip")
+    @Column(name = "est_tip") // Estatus
     private String est_tip;
-
-    //Metodos Constructores
-    public Tipo_Privacidad() {
+    
+    // --- Constructores ---
+    public TipoPrivacidad() {
     }
 
-    public Tipo_Privacidad(int cod_tip) {
-        this.cod_tip = cod_tip;
-    }
-
-    public Tipo_Privacidad(String nom_tip, String est_tip) {
-        this.nom_tip = nom_tip;
-        this.est_tip = est_tip;
-    }
-
-    public Tipo_Privacidad(int cod_tip, String nom_tip, String est_tip) {
+    public TipoPrivacidad(int cod_tip, String nom_tip, String est_tip) {
         this.cod_tip = cod_tip;
         this.nom_tip = nom_tip;
         this.est_tip = est_tip;
     }
 
-    //Metodos Getters y Setters
+    // --- GETTERS Y SETTERS ---
+    
     public int getCod_tip() {
         return cod_tip;
     }

@@ -1,0 +1,230 @@
+input, 
+select, 
+textarea, 
+button {
+    font-family: inherit; /* Esto obliga a usar la fuente del body */
+    font-size: inherit;   /* Mantiene el tamaño proporcional */
+}
+
+
+body {
+    font-family: sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+    margin: 0;
+}
+
+
+.tarjeta-contenedor, .contenedor-tarjeta {
+    max-width: 900px; 
+    width: 100%;
+    border-radius: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    background-color: white;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+
+.tarjeta-contenedor.pequena {
+    max-width: 36rem;
+}
+
+
+.cabecera-logo {
+    background-image: linear-gradient(to right, #cd07ec 0%, #f977ee 100%);
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+.cabecera-logo img {
+    width: 250px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+}
+
+.cabecera-logo h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+
+.contenido-principal {
+    padding: 1.5rem;
+    background-color: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.titulo-seccion, .titulo-bienvenida, .titulo-solicitud, .titulo-personal, .titulo-persona {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    background-image: linear-gradient(to right, #cd07ec 0%, #f977ee 100%);
+    color: white;
+    border-radius: 9999px;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 600px;
+    text-transform: uppercase;
+}
+
+
+.formulario {
+    width: 100%;
+}
+
+.rejilla-formulario {
+    display: flex; 
+    flex-direction: column; 
+    gap: 1rem;
+}
+
+.campo {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.etiqueta {
+    display: block;
+    color: #4b5563;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    text-align: left;
+}
+
+.entrada {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.entrada:focus {
+    border-color: #cd07ec;
+    box-shadow: 0 0 0 2px rgba(205, 7, 236, 0.3);
+}
+
+
+.contenedor-botones, .rejilla-botones {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.boton-accion {
+    padding: 0.6rem 1.5rem;
+    border-radius: 9999px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background-image: linear-gradient(to right, #cd07ec 0%, #f977ee 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boton-accion:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px rgba(205, 7, 236, 0.3);
+}
+
+
+.boton-secundario, .boton-volver {
+    padding: 0.6rem 1.5rem;
+    border-radius: 9999px;
+    color: #222;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background: linear-gradient(to right, #bfc4ca 0%, #e5e7eb 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-secundario:hover, .boton-volver:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+.contenedor-tabla {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: linear-gradient(to right, #cd07ec 0%, #f977ee 100%);
+    color: white;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) { background-color: #fdf2ff; }
+tbody tr:hover { background-color: #f3e8f5; }
+
+
+.boton-accion-tabla {
+    color: #cd07ec;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0 5px;
+}
+
+
+.error {
+    color: #9d05b5; 
+    background-color: #fff0ff;
+    border: 1px solid #f977ee;
+    padding: 6px 10px; 
+    margin-top: 5px; 
+    font-size: 0.9em; 
+    font-weight: bold; 
+    border-radius: 4px; 
+    display: block !important; 
+    animation: fadeIn 0.3s ease-out;
+}
+
+.invalida {
+    border: 2px solid #f977ee !important; 
+    box-shadow: 0 0 5px rgba(249, 119, 238, 0.5); 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}

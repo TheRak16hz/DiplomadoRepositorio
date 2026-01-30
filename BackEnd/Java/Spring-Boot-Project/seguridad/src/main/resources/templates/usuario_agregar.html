@@ -3,41 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agregar Rol</title>
+    <title>Agregar Usuario</title>
     <link rel="stylesheet" th:href="@{/css/estilos.css}">
   </head>
   <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
     <div class="tarjeta-contenedor">
       <div class="cabecera-logo">
       <img th:src="@{/imagenes/logo.jpeg}" alt="Logo de la red social" class="img-fluid w-25">
-        <h1 class="text-lg font-bold">Registro Rol</h1>
+        <h1 class="text-lg font-bold">Registro Usuario</h1>
       </div>
 
       <div class="contenido-principal">
-        <h2 class="titulo-seccion">Agregar Nuevo Rol</h2>
-
-        <form th:action="@{/rol_agregar}" th:object="${rol}" class="formulario" method="post">
+        <h2 class="titulo-seccion">Agregar Nuevo Usuario</h2>
+        <form th:action="@{/usuario_agregar}" th:object="${usuario}" class="formulario" method="post">
           <div class="rejilla-formulario">
             <div class="campo">
-              <label for="nom_rol" class="etiqueta"
-                >Nombre Del Rol</label>
+              <label for="ali_usu" class="etiqueta"
+                >Alias Del Usuario</label>
               <input
                 type="text"
-                id="nom_rol"
-                name="nom_rol" th:field="*{nom_rol}"
+                id="ali_usu"
+                name="ali_usu" th:field="*{ali_usu}"
                 class="entrada"
               />
               <span class="error-message"></span>
             </div>
             <div class="campo">
-              <label for="des_rol" class="etiqueta"
-                >Descripcion del Rol</label>
-                <textarea id="des_rol" name="des_rol" th_field="*{des_rol}" class="entrada" maxlength="100"></textarea>
+              <label for="ema_usu" class="etiqueta"
+                >Email del Usuario</label>
+              <input
+                type="email"
+                id="ema_usu"
+                name="ema_usu" th:field="*{ema_usu}"
+                class="entrada"
+              />
               <span class="error-message"></span>
             </div>
             <div class="campo">
-              <label for="est_fan_page" class="etiqueta">Estatus</label>
-              <select id="est_fan_page" name="est_fan_page" th:field="*{est_rol}" class="entrada" required>
+              <label for="cla_usu" class="etiqueta"
+                >Clave del Usuario</label>
+              <input
+                type="password"
+                id="cla_usu"
+                name="cla_usu" th:field="*{cla_usu}"
+                class="entrada"
+              />
+              <span class="error-message"></span>
+            </div>
+            <div class="campo">
+              <label for="est_usu" class="etiqueta">Estatus</label>
+              <select id="est_usu" name="est_usu" th:field="*{est_usu}" class="entrada" required>
                 <option value="">Seleccione...</option>
                 <option value="A">Activo</option>
                 <option value="I">Inactivo</option>
@@ -47,13 +62,13 @@
           </div>
           <div class="contenedor-botones">
             <button type="submit" class="boton-accion">Guardar Registro</button>
-            <a th_href='@{/rol}' class="boton-secundario">Volver</a>
+            <a th:href='@{/usuario}' class="boton-secundario">Volver</a>
           </div>
         </form>
       </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"crossorigin="anonymous"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <script th:inline="javascript">
@@ -63,7 +78,7 @@
       if (mensaje === "exito") {
           Swal.fire({
               title: "¡Logrado!",
-              text: "El rol se ha registrado correctamente.",
+              text: "El usuario se ha registrado correctamente.",
               icon: "success",
               confirmButtonColor: "#3085d6"
           });

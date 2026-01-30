@@ -5,40 +5,28 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Entity
-
+@Entity 
 @Table(name = "usuario", schema = "seguridad")
 public class Usuario {
-    
+
     @Id
     @Column(name = "cod_usu")
     private int cod_usu;
 
-    @Column(name = "ali_usu")
+    @Column(name = "ali_usu") // Alias del usuario (Nombre de usuario)
     private String ali_usu;
 
-    @Column(name = "ema_usu")
+    @Column(name = "ema_usu") // Email del usuario
     private String ema_usu;
 
-    @Column(name = "cla_usu")
+    @Column(name = "cla_usu") // Clave del usuario
     private String cla_usu;
 
-    @Column(name = "est_usu")
+    @Column(name = "est_usu") // Estatus
     private String est_usu;
-
-    //contructores
+    
+    // --- Constructores ---
     public Usuario() {
-    }
-
-    public Usuario(int cod_usu) {
-        this.cod_usu = cod_usu;
-    }
-
-    public Usuario(String ali_usu, String ema_usu, String cla_usu, String est_usu) {
-        this.ali_usu = ali_usu;
-        this.ema_usu = ema_usu;
-        this.cla_usu = cla_usu;
-        this.est_usu = est_usu;
     }
 
     public Usuario(int cod_usu, String ali_usu, String ema_usu, String cla_usu, String est_usu) {
@@ -49,7 +37,8 @@ public class Usuario {
         this.est_usu = est_usu;
     }
 
-    //metodos getters y setters
+    // --- GETTERS Y SETTERS ---
+    
     public int getCod_usu() {
         return cod_usu;
     }

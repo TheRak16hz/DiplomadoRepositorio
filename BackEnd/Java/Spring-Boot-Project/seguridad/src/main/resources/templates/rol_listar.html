@@ -1,74 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" th:href="@{/css/4.2-rol_listar.css}">
-    <!--<link rel="stylesheet" th:href="@{/css/index.css}">
-    <link rel="stylesheet" th:href="@{/css/2-seguridad.css}">-->
+    <link rel="stylesheet" th:href="@{/css/estilos.css}" />
     <title>Listar Rol</title>
-  </head>
-  <body>
+</head>
+<body>
     <div class="contenedor-tarjeta">
-      <div class="cabecera-logo">
-       <img th:src="@{/img/logo.png}" alt="imagen logo" class="logo-imagen" />
-      </div>
-
-      <div class="contenido-principal">
-        <div class="titulo-solicitud">Datos Roles</div>
-
-        <div class="contenedor-tabla">
-          <table class="tabla-centrada">
-            <thead>
-              <tr>
-                <th>Código</th>
-                <th>Nombre Del Rol</th>
-                <th>Descripción del Rol</th>
-                <th>Estatus</th>
-                <th>Acción</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr th:if="${#lists.isEmpty(rols)}">
-                    <td colspan="5" class="text-center"> No hay roles registrados.</td>
-                </tr>
-                <tr th:each="rol : ${rols}" class="text-center">
-                    <td class="text-center" th:text="*{rol.cod_rol}"></td>
-                    <td class="text-center" th:text="*{rol.nom_rol}"></td>
-                    <td class="text-center" th:text="*{rol.des_rol}"></td>
-                    <td class="text-center" th:text="*{rol.est_rol}"></td>
-                    <td class="text-center acciones-tabla">
-                        <a href="4.1-rol_agregar.html" class="boton-accion-tabla" title="Editar">Editar</a> 
-                        <a href="#" class="boton-accion-tabla" title="Eliminar">Eliminar</a>
-                    </td>
-                </tr> 
-            </tbody>
-          </table>
+        <div class="cabecera-logo">
+            <img th:src="@{/imagenes/logo.jpeg}" alt="Logo de la aplicación" class="logo-imagen" />
         </div>
 
-        <div class="rejilla-botones">
-          <button
-            class="boton-accion"
-            onclick="window.location.href='rol_agregar.html'"
-          >
-            Agregar
-          </button>
-          <button
-            class="boton-accion"
-            th:onclick="|window.location.href='@{/rol}'|"
-          >
-            Rol
-          </button>
-          <button
-            class="boton-accion"
-            th:onclick="|window.location.href='@{/seguridad}'|"
-          >
-            Menú Principal
-          </button>
+        <div class="contenido-principal">
+            <div class="titulo-solicitud">Datos Roles</div>
+
+            <div class="contenedor-tabla">
+                <table class="tabla-centrada">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nombre Del Rol</th>
+                            <th>Descripción del Rol</th>
+                            <th>Estatus</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:if="${#lists.isEmpty(rols)}">
+                            <td colspan="5" class="text-center">No hay roles registrados actualmente.</td>
+                        </tr>
+
+                        <tr th:each="rol : ${rols}">
+                            <td class="text-center" th:text="${rol.Cod_rol}"></td>
+                            <td class="text-center" th:text="${rol.Nom_rol}"></td>
+                            <td class="text-center" th:text="${rol.Des_rol}"></td>
+                            <td class="text-center" th:text="${rol.Est_rol}"></td>
+                            
+                            <td class="text-center acciones-tabla">
+                                <a th:href="@{/rol_editar(cod_rol=${rol.getCod_rol()})}" class="boton-accion-tabla" title="Editar">✎</a>
+                                <a th:href="@{/rol_eliminar(cod_rol=${rol.getCod_rol()})}" class="boton-accion-tabla btn-eliminar-confirmar" th:data-id="${rol.getCod_rol()}" th:data-nombre="${rol.getNom_rol()}" title="Eliminar">🗑️</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="rejilla-botones">
+                <button
+                    class="boton-accion"
+                    th:onclick="|window.location.href='@{/rol_agregar}'|"
+                >
+                    Agregar
+                </button>
+                
+                <button
+                    class="boton-accion"
+                    th:onclick="|window.location.href='@{/rol}'|"
+                >
+                    Rol
+                </button>
+                
+                <button
+                    class="boton-accion"
+                    th:onclick="|window.location.href='@{/seguridad}'|"
+                >
+                    Menú Principal
+                </button>
+            </div>
         </div>
-      </div>
     </div>
-    <script src="../JAVASCRIPT/roles.js"></script>
-  </body>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script th:inline="javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            
+            // 1. MOSTRAR ALERTAS DE ÉXITO O ERROR (Vienen del Controlador)
+            // Usamos una sintaxis segura para procesar los mensajes de Thymeleaf
+            /*[# th:if="${exito}"]*/
+                Swal.fire({
+                    icon: 'success',
+                    title: '¡Hecho!',
+                    text: [[${exito}]],
+                    confirmButtonColor: 'rgba(172, 11, 236, 1)',
+                    timer: 3000
+                });
+            /*[/]*/
+
+            /*[# th:if="${error}"]*/
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Lo siento',
+                    text: [[${error}]],
+                    confirmButtonColor: 'rgba(172, 11, 236, 1)'
+                });
+            /*[/]*/
+
+
+            // 2. LÓGICA DE CONFIRMACIÓN PARA ELIMINAR
+            const botonesEliminar = document.querySelectorAll('.btn-eliminar-confirmar');
+
+            botonesEliminar.forEach(boton => {
+                boton.addEventListener('click', function(event) {
+                    event.preventDefault(); // Evita que se elimine directamente
+                    
+                    const urlDestino = this.getAttribute('href'); 
+                    const codRol = this.getAttribute('data-id');
+                    const nomRol = this.getAttribute('data-nombre');
+
+                    Swal.fire({
+                        title: '¿Estás seguro?',
+                        text: `Vas a eliminar el rol: ${nomRol} (Código: ${codRol})`,
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: 'rgba(172, 11, 236, 1)',
+                        cancelButtonColor: '#f122d2ff',
+                        confirmButtonText: 'Sí, eliminar',
+                        cancelButtonText: 'Cancelar'
+                    }).then((result) => {
+                        if (result.isConfirmed){                          
+                            window.location.href = urlDestino;
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    </script>
+</body>
 </html>

@@ -7,10 +7,9 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "persona", schema = "perfil_personal")
-public class Persona {
-
+public class persona {
     @Id
-    @Column(name = "cod_per")
+    @Column(name = "cod_per")   
     private int cod_per;
 
     @Column(name = "nm1_per")
@@ -25,22 +24,13 @@ public class Persona {
     @Column(name = "ap2_per")
     private String ap2_per;
 
-    //Constructores
-    public Persona() {
+    //constructores
+
+
+    public persona() {
     }
 
-    public Persona(int cod_per) {
-        this.cod_per = cod_per;
-    }
-
-    public Persona(String nm1_per, String nm2_per, String ap1_per, String ap2_per) {
-        this.nm1_per = nm1_per;
-        this.nm2_per = nm2_per;
-        this.ap1_per = ap1_per;
-        this.ap2_per = ap2_per;
-    }
-
-    public Persona(int cod_per, String nm1_per, String nm2_per, String ap1_per, String ap2_per) {
+    public persona(int cod_per, String nm1_per, String nm2_per, String ap1_per, String ap2_per) {
         this.cod_per = cod_per;
         this.nm1_per = nm1_per;
         this.nm2_per = nm2_per;
@@ -48,7 +38,19 @@ public class Persona {
         this.ap2_per = ap2_per;
     }
 
-    //getters y setters
+
+    public persona(String nm1_per, String nm2_per, String ap1_per, String ap2_per) {
+        this.nm1_per = nm1_per;
+        this.nm2_per = nm2_per;
+        this.ap1_per = ap1_per;
+        this.ap2_per = ap2_per;
+    }
+
+    public persona(int cod_per) {
+        this.cod_per = cod_per;
+    }
+
+    // Getters and Setters
     public int getCod_per() {
         return cod_per;
     }
@@ -88,8 +90,5 @@ public class Persona {
     public void setAp2_per(String ap2_per) {
         this.ap2_per = ap2_per;
     }
-
-    
-    
 
 }

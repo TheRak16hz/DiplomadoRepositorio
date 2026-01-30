@@ -5,14 +5,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Entity
-//@entity le dice a java que la clase rol esta relacionada con una tabla en la BD
-//cada fila de la tabla 'rol' se convertira en un objeto de la clase rol
-
-@Table(name = "rol", schema = "seguridad")
-//debo indicarle el esquema y la tabla con lacual va a estar enlazada la clase rol
+@Entity 
+@Table(name = "Rol", schema = "seguridad")
 public class Rol {
-    // se colocan como atributos los nombres de cada una de las columnas de la tabla
+
+    // NOTA: Tu variable se llama 'cod_id', no 'cod_rol'
     @Id
     @Column(name = "cod_rol")
     private int cod_rol;
@@ -25,20 +22,9 @@ public class Rol {
 
     @Column(name = "est_rol")
     private String est_rol;
-
-
-    //Metodos Constructores
+    
+    // --- Constructores ---
     public Rol() {
-    }
-
-    public Rol(int cod_rol) {
-        this.cod_rol = cod_rol;
-    }
-
-    public Rol(String nom_rol, String des_rol, String est_rol) {
-        this.nom_rol = nom_rol;
-        this.des_rol = des_rol;
-        this.est_rol = est_rol;
     }
 
     public Rol(int cod_rol, String nom_rol, String des_rol, String est_rol) {
@@ -48,7 +34,9 @@ public class Rol {
         this.est_rol = est_rol;
     }
 
-    //Metodos Getters y Setters
+    // --- ¡AQUÍ ESTÁBAN LOS FALTANTES! GETTERS Y SETTERS ---
+    
+    // Para cod_id
     public int getCod_rol() {
         return cod_rol;
     }
@@ -57,6 +45,7 @@ public class Rol {
         this.cod_rol = cod_rol;
     }
 
+    // Para nom_rol
     public String getNom_rol() {
         return nom_rol;
     }
@@ -65,6 +54,7 @@ public class Rol {
         this.nom_rol = nom_rol;
     }
 
+    // Para des_rol
     public String getDes_rol() {
         return des_rol;
     }
@@ -73,6 +63,7 @@ public class Rol {
         this.des_rol = des_rol;
     }
 
+    // Para est_rol
     public String getEst_rol() {
         return est_rol;
     }
@@ -81,5 +72,3 @@ public class Rol {
         this.est_rol = est_rol;
     }
 }
-
-

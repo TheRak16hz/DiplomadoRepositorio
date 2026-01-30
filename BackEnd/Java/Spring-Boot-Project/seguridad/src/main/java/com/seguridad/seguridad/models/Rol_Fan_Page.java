@@ -3,6 +3,8 @@ package com.seguridad.seguridad.models;
 //Permite utilizar la anotacion Column
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -14,12 +16,13 @@ import jakarta.persistence.Table;
 public class Rol_Fan_Page {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cod_rol_fan")
-    private int cod_rol_fan;
+    private Integer cod_rol_fan;
 
     @ManyToOne
     @JoinColumn(name = "fky_per", referencedColumnName = "cod_per")
-    private Persona persona;
+    private persona persona;
 
     @ManyToOne
     @JoinColumn(name = "fky_fan_pag", referencedColumnName = "cod_fan_pag")
@@ -39,7 +42,7 @@ public class Rol_Fan_Page {
     }
 
     //Constructor Completo
-    public Rol_Fan_Page(int cod_rol_fan, Persona persona, Fan_Page fan_page, Rol rol, String est_rol_fan) {
+    public Rol_Fan_Page(Integer cod_rol_fan, persona persona, Fan_Page fan_page, Rol rol, String est_rol_fan) {
         this.cod_rol_fan = cod_rol_fan;
         this.persona = persona;
         this.fan_page = fan_page;
@@ -47,16 +50,16 @@ public class Rol_Fan_Page {
         this.est_rol_fan = est_rol_fan;
     }       
     // Getters and Setters
-    public int getCod_rol_fan() {   
+    public Integer getCod_rol_fan() {   
         return cod_rol_fan;
     }   
-    public void setCod_rol_fan(int cod_rol_fan) {
+    public void setCod_rol_fan(Integer cod_rol_fan) {
         this.cod_rol_fan = cod_rol_fan;
     }
-    public Persona getPersona() {
+    public persona getPersona() {
         return persona;
     }
-    public void setPersona(Persona persona) {
+    public void setPersona(persona persona) {
         this.persona = persona;
     }   
     public Fan_Page getFan_page() {
