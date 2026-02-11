@@ -59,7 +59,7 @@ print(type(nota))
 cantidad = input(int("ingrese la cantidad de mercancia existente: "))
 
 if cantidad > 0:
-    print:("si compro mercancia")
+    print("si compro mercancia")
 elif cantidad < 0:
     print("no se aceptan valores negativos")
 else:
