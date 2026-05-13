@@ -1,0 +1,165 @@
+:root {
+  --mc-red: #da291c;
+  --mc-yellow: #ffc72c;
+  --mc-white: #ffffff;
+  --mc-black: #27251f;
+  --bg-color: #f4f4f4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--mc-white);
+  color: var(--mc-black);
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+header h1 {
+  color: var(--mc-red);
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.list-container {
+  width: 100%;
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+h3 {
+  margin-top: 0;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.btn-save {
+  background-color: var(--mc-red);
+  color: white;
+  flex: 1;
+}
+
+.btn-cancel {
+  background-color: #666;
+  color: white;
+}
+
+/* Table Styles */
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.inventory-table th, .inventory-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.inventory-table th {
+  background-color: var(--mc-yellow);
+  color: var(--mc-black);
+}
+
+.inventory-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.btn-edit {
+  background-color: var(--mc-yellow);
+  color: var(--mc-black);
+  margin-right: 5px;
+  padding: 5px 10px;
+}
+
+.btn-delete {
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+}
+
+.setup-banner {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.btn-setup {
+  background-color: var(--mc-red);
+  color: white;
+  margin-top: 10px;
+}

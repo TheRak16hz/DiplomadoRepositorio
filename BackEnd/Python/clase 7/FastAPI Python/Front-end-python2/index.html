@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <title>Gestion de Peliculas y Comentarios</title>
+</head>
+<body>
+    <header>
+        <h1>Pelicula y Comentarios</h1>
+    </header>
+
+    <section id="peliculas">
+        <h2>Peliculas</h2>
+        <ul id="peliculas-list"></ul>
+    </section>
+
+    <section id="comentarios">
+        <h2>Comentarios</h2>
+        <div id="comentarios-list"></div>
+        <!-- Formulario para agregar comentarios -->
+         <h3>Agregar Comentarios</h3>
+         <form action="" id="form-comentario">
+            <textarea name="" id="comentario-text" placeholder="Escribe tu comentario"></textarea>
+            <select name="" id="comentario-pelicula">
+                <!-- las opciones se llenaran dinamicamente -->
+            </select>
+            <button type="submit">Agregar Comentarios</button>
+         </form>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>

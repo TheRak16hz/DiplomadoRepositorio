@@ -1,0 +1,99 @@
+/* src/App.css */
+:root {
+  --primary-color: #007bff;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+  --bg-color: #f8f9fa;
+  --text-color: #333;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 20px;
+}
+
+.contenedor {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Navegación */
+.nav-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+button:hover { background-color: #0056b3; }
+button.btn-peligro { background-color: var(--danger-color); }
+button.btn-peligro:hover { background-color: #a71d2a; }
+button.btn-editar { background-color: #ffc107; color: #333; }
+button.btn-editar:hover { background-color: #e0a800; }
+button.btn-exito { background-color: var(--success-color); }
+button.btn-exito:hover { background-color: #1e7e34; }
+
+/* Espaciado entre botones en acciones */
+td button {
+  margin-right: 8px;
+}
+td button:last-child {
+  margin-right: 0;
+}
+button.btn-nav { background-color: #e9ecef; color: #333; }
+button.btn-nav:hover, button.btn-nav.activo { background-color: #ced4da; }
+
+/* Formularios */
+.formulario {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  min-width: 150px;
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th { background-color: #f4f4f4; }
+
+/* Forzar que los títulos sean negros/oscuros para buena lectura */
+h1, h2, h3 {
+  color: #111111;
+}

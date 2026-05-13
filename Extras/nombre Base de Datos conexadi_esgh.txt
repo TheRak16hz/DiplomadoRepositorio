@@ -1,0 +1,2 @@
+nombre Base de Datos: conexadi_esgh
+nombre de usuario: conexadi_rak, pass: seb_e_16
